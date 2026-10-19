@@ -1,0 +1,35 @@
+Q1(a): minimisers x(mu) = mu/2
+  mu=0:  x(mu) analytic=0.0000  numeric=0.0000   min L analytic=0.0000  numeric=0.0000
+  mu=1:  x(mu) analytic=0.5000  numeric=0.5000   min L analytic=0.7500  numeric=0.7500
+  mu=2:  x(mu) analytic=1.0000  numeric=1.0000   min L analytic=1.0000  numeric=1.0000
+  mu=3:  x(mu) analytic=1.5000  numeric=1.5000   min L analytic=0.7500  numeric=0.7500
+
+Q1(b): mu* (grid search) = 2.0000, d* = 1.0000
+
+Q1(c): truncated sup over mu in [0,M] at sample x
+   x    M=1        M=10       M=100      M=1000     x^2
+  -1.00  3.000      21.000     201.000    2001.000   1.000
+   0.00  1.000      10.000     100.000    1000.000   0.000
+   0.50  0.750      5.250      50.250     500.250    0.250
+   0.99  0.990      1.080      1.980      10.980     0.980
+   1.00  1.000      1.000      1.000      1.000      1.000
+   2.00  4.000      4.000      4.000      4.000      4.000
+   3.00  9.000      9.000      9.000      9.000      9.000
+
+Q2(a): L(mu*,x*) = 1.0000
+  max_mu L(mu,x*) over mu in [0,50]   = 1.0000  (left ineq holds: True)
+  min_x  L(mu*,x) over x in [-20,20]  = 1.0000  (right ineq holds: True)
+  max |L(2,x) - ((x-1)^2+1)|           = 1.14e-13
+
+Q2(c): x >= -1 ->  argmin x^2 numeric = 0.0000, h(0) = -1.0
+  mu* (grid search) = 0.0000, d* = 0.0000
+
+Q3(a): weak duality check  d(mu) <= p* = 1
+  mu=0: d(mu) = 0.0000   gap p*-d = 1.0000   holds: True
+  mu=1: d(mu) = 0.7500   gap p*-d = 0.2500   holds: True
+  mu=2: d(mu) = 1.0000   gap p*-d = 0.0000   holds: True
+  mu=3: d(mu) = 0.7500   gap p*-d = 0.2500   holds: True
+  max over mu in [0,100] of d(mu) = 1.0000 <= 1
+
+Q3(b): envelope min(mu, 1, 4-mu) >= d(mu) everywhere: True; touches d at mu = 0, 2, 4
+  envelope midpoint-concave on grid: True

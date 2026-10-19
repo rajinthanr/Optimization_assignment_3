@@ -1,0 +1,18 @@
+# LaTeX build artefacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+
+# Python
+__pycache__/
+*.pyc
+
+# Assignment brief (provided by the lecturer)
+EN3330_Assignment_03*.pdf
+
+# Local submission copy (same as report/report.pdf)
+220502M_EN3330_A03.pdf
